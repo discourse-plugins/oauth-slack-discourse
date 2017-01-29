@@ -9,9 +9,9 @@ require 'omniauth-oauth2'
 
 class SlackAuthenticator < ::Auth::OAuth2Authenticator
 
-  CLIENT_ID = ENV['SLACK_CLIENT_ID']
-  CLIENT_SECRET = ENV['SLACK_CLIENT_SECRET']
-  TEAM_ID = ENV['SLACK_TEAM_ID']
+  CLIENT_ID = GlobalSetting.slack_client_id
+  CLIENT_SECRET = GlobalSetting.slack_client_secret
+  TEAM_ID = GlobalSetting.slack_team_id
 
   def name
     'slack'
